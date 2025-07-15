@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RexShop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Tienda de Productos</h1>
+
+    <div class="categorias">
+      <button onclick="mostrarCategoria('electronica')">Electrónica</button>
+      <button onclick="mostrarCategoria('Accesorios')">Accesorios</button>
+      <button onclick="mostrarCategoria('Dibujos')">Dibujos</button>
+    </div>
+
+    <main id="contenido">
+      <!-- Electrónica -->
+      <section id="electronica" class="categoria">
+        <h2>Electrónica</h2>
+        <div class="productos-grid">
+          <div class="producto">
+            <img src="img/Teclado.png" alt="Teclado" />
+            <h3>Teclado Gamer</h3>
+            <p>Ideal para estudiar, trabajar o jugar.</p>
+            <span>$400</span>
+          </div>
+          <div class="producto">
+            <img src="img/USB.jpg" alt="USB" />
+            <h3>USB</h3>
+            <p>Puente USB 2.0 de alta velocidad con 7 puertos, interruptor de indicador LED.</p>
+            <span>$200</span>
+          </div>
+          <div class="producto">
+            <img src="img/HDMI.jpg" alt="HDMI" />
+            <h3>Cable HDMI</h3>
+            <p>Cable HDMI Full HD 1080p PS3 XBOX 360 Laptop TV PC.</p>
+            <span>$260</span>
+          </div>
+       
+        <div class="producto">
+            <img src="img/Proximamente.jpeg" alt="x" />
+            <h3>Proximamente</h3>
+            <p>....</p>
+            <span>$0</span>
+          </div>
+          <div class="producto">
+            <img src="img/Proximamente.jpeg" alt="x" />
+            <h3>Proximamente</h3>
+            <p>....</p>
+            <span>$0</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accesorios -->
+      <section id="Accesorios" class="categoria">
+        <h2>Llavero</h2>
+        <div class="productos-grid">
+          <div class="producto">
+            <img src="img/Llavero.png" alt="Llavero de diamante" />
+            <h3>Llavero de Diamante</h3>
+            <p>Un pequeño colgante de diamante 2D, Adecuado para regalos, decoracion, etc.</p>
+            <span>$30</span>
+          </div>
+          <div class="producto">
+            <img src="img/Proximamente.jpeg" alt="Jeans" />
+            <h3>Proximamente</h3>
+            <p>....</p>
+            <span>$0</span>
+          </div>
+          <div class="producto">
+            <img src="img/Proximamente.jpeg" alt="Chaqueta" />
+            <h3>Proximamente</h3>
+            <p>....</p>
+            <span>$0</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dibujos -->
+      <section id="Dibujos" class="categoria">
+        <h2>Dibujos</h2>
+        <div class="productos-grid">
+          <div class="producto">
+            <img src="img/Proximamente.jpeg" alt="Tacos" />
+            <h3>Proximamente</h3>
+            <p>....</p>
+            <span>$0</span>
+          </div>
+          <div class="producto">
+            <img src="img/Proximamente.jpeg" alt="Pizza" />
+            <h3>Proximamente</h3>
+            <p>....</p>
+            <span>$0</span>
+          </div>
+          <div class="producto">
+            <img src="img/Proximamente.jpeg" alt="Refresco" />
+            <h3>Proximamente</h3>
+            <p>....</p>
+            <span>$0</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function mostrarCategoria(id) {
+      const secciones = document.querySelectorAll('.categoria');
+      secciones.forEach(seccion => seccion.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    // Mostrar primero Electrónica
+    mostrarCategoria('electronica');
+  </script>
+</body>
+</html>
